@@ -8,6 +8,7 @@ public class PlayerFight : MonoBehaviour
     [Header("Misc References")]
     public Animator animator;
     public LayerMask enemyLayer;
+    public SFXManager sfxManager;
 
     [Header("Melee")]
     public Transform meleePoint;
@@ -33,6 +34,8 @@ public class PlayerFight : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                sfxManager.play("grunt2");
+                animator.SetTrigger("fight");
                 melee();
                 nextAttackTime = Time.time + meleeRate;
             }

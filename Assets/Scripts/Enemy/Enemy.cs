@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     public float thirstGift;
 
     public Animator animator;
+    public Sprite deadSquirrel;
+    public Sprite deadMomby;
 
     public Collider2D myCol;
 
@@ -37,8 +39,13 @@ public class Enemy : MonoBehaviour
 
     public void die()
     {
-        if (gameObject.GetComponent<Momby>() != null) {
+        if (gameObject.GetComponent<Momby>() != null)
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = deadMomby;
             gameObject.GetComponent<Momby>().die();
+        }
+        else {
+            gameObject.GetComponent<SpriteRenderer>().sprite = deadSquirrel;
         }
         alive = false;
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
