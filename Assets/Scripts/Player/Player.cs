@@ -66,7 +66,8 @@ public class Player : MonoBehaviour
                 release.gameObject.SetActive(true);
             }
             else release.gameObject.SetActive(false);
-            if (thirst <= 30) {
+            if (thirst <= 30)
+            {
                 health -= healthDecay * Time.deltaTime;
             }
         }
@@ -130,9 +131,9 @@ public class Player : MonoBehaviour
                 {
                     Color color = tilemap.GetColor(currentCoord);
                     tilemap.SetTileFlags(currentCoord, TileFlags.None);
-                    tilemap.SetColor(currentCoord, new Color(color.r + 0.4f * Time.deltaTime, color.g + 0.4f * Time.deltaTime, color.b + 0.4f * Time.deltaTime, 1));
+                    tilemap.SetColor(currentCoord, new Color(color.r - 0.35f * Time.deltaTime, color.g - 0.35f * Time.deltaTime, color.b - 0.35f * Time.deltaTime, 1));
 
-                    if (color.g >= 1)
+                    if (color.g <= 0.4)
                     {
                         tilemap.SetTile(currentCoord, deadTile);
                     }
