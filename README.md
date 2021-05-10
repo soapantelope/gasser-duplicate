@@ -1,1 +1,2 @@
-# NOTE: THIS REPOSITORY DOES NOT HAVE COMMIT HISTORY; I HAD TO TRANSFER THE CODE DUE TO GITIGNORE ISSUES. TO VIEW COMMIT HISTORY UP TO A CERTAIN POINT, GO TO https://github.com/queazy/2020-game
+# Note: This repository doesn't have commit history; I had to transfer the code due to gitignore issues.
+# To view commit history up to a certain point, go to https://github.com/queazy/2020-game
